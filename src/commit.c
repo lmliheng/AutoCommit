@@ -26,20 +26,19 @@ int main() {
     // 关闭文件
     fclose(file);
 
+    system("rm -rf /root/c/AutoCommit_push/AutoCommit");
+
+    printf("删除拉取目录一次结束\n");
+
     printf("日志已经写入 /root/c/AutoCommit_push/log/commit.log\n");
 
 
 
-    system("rm -rf /root/c/AutoCommit_push/AutoCommit");
-
     printf("删除拉取目录结束\n");
-
 
     system("bash /root/c/AutoCommit_push/clone.sh");
 
     printf("成功拉取新目录\n");
-
-
 
     system("yes | cp -rf /root/c/AutoCommit_push/AutoCommit/.git .");
 
@@ -47,11 +46,13 @@ int main() {
     
     system("git remote set-url origin git@github.com:lmliheng/AutoCommit.git");
 
-
-
     system("bash /root/c/AutoCommit_push/push.sh");
 
 
+    system("rm -rf /root/c/AutoCommit_push/AutoCommit");
 
+    printf("删除拉取目录二次结束\n");
+
+    
     return 0;
 }
