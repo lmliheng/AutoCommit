@@ -39,7 +39,6 @@ int main() {
 
     printf("成功拉取新目录\n");
 
-    sleep(5);
 
     system("yes | cp -rf /root/c/AutoCommit_push/AutoCommit/.git .");
 
