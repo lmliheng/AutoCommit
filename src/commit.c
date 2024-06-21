@@ -15,7 +15,7 @@ int main() {
     strftime(buffer, 80, "%Y-%m-%d %H:%M:%S", timeinfo);
 
     // 创建或打开 log/commit_log 文件
-    FILE *file = fopen("/root/c/AutoCommit_push/log/commit.log", "a");
+    FILE *file = fopen("../log/commit.log", "a");
     if (file == NULL) {
         printf("无法打开日志文件！\n");
         return 1;
