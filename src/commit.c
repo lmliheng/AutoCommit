@@ -16,7 +16,7 @@ int main() {
     // 创建或打开 log/commit_log 文件
     FILE *file = fopen("log/commit.log", "a");
     if (file == NULL) {
-        printf("Error opening file!\n");
+        printf("无法打开日志文件！\n");
         return 1;
     }
 
