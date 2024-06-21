@@ -26,17 +26,17 @@ int main() {
     // 关闭文件
     fclose(file);
 
-    printf("Commit Current time has been written to log/commit.log.\n");
+    printf("日志已经写入 /root/c/AutoCommit_push/log/commit.log\n");
 
-    system("rm -rf AutoCommit");
+    system("rm -rf /root/c/AutoCommit_push/AutoCommit");
 
-    system("bash clone.sh");
+    system("bash /root/c/AutoCommit_push/clone.sh");
 
-    system("yes | cp -rf AutoCommit/.git .");
+    system("yes | cp -rf /root/c/AutoCommit_push/AutoCommit/.git .");
     
     system("git remote set-url origin git@github.com:lmliheng/AutoCommit.git");
 
-    system("bash push.sh");
+    system("bash /root/c/AutoCommit_push/push.sh");
 
 
 
