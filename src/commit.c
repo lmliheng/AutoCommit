@@ -33,6 +33,7 @@ int main() {
 
     printf("日志已经写入 /root/c/AutoCommit_push/log/commit.log\n");
 
+
     printf("删除拉取目录结束\n");
 
     system("bash /root/c/AutoCommit_push/clone.sh");
@@ -47,6 +48,7 @@ int main() {
     system("git remote set-url origin git@github.com:lmliheng/AutoCommit.git");
 
     system("bash /root/c/AutoCommit_push/push.sh");
+
 
     system("rm -rf /root/c/AutoCommit_push/AutoCommit");
 
