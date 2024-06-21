@@ -28,13 +28,26 @@ int main() {
 
     printf("日志已经写入 /root/c/AutoCommit_push/log/commit.log\n");
 
+
+
     system("rm -rf /root/c/AutoCommit_push/AutoCommit");
+
+    printf("删除拉取目录结束");
+
 
     system("bash /root/c/AutoCommit_push/clone.sh");
 
+    printf("成功拉取新目录");
+
+
+
     system("yes | cp -rf /root/c/AutoCommit_push/AutoCommit/.git .");
+
+    printf("成功复制git历史提交记录");
     
     system("git remote set-url origin git@github.com:lmliheng/AutoCommit.git");
+
+
 
     system("bash /root/c/AutoCommit_push/push.sh");
 
