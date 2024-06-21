@@ -33,6 +33,7 @@ make
 ```
 将/path/to/your/executable替换为实际的./commit可执行文件路径。
 
+查看定时任务运行日志` cat /var/spool/mail/root`
 ## 参考🚡
 关于crontab的详细信息，请参考这篇[教程](http://linux.liheng.work/c/crontab.html)
 ## 协议💐
