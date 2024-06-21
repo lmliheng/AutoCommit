@@ -1,7 +1,8 @@
 #include<stdio.h>
-#include <time.h>
+#include<time.h>
 #include<string.h>
 #include<stdlib.h>
+#include<unistd.h> 
 
 int main() {
     // 获取当前时间
@@ -40,6 +41,8 @@ int main() {
 
     printf("成功拉取新目录\n");
 
+    sleep(5);
+
     system("yes | cp -rf /root/c/AutoCommit_push/AutoCommit/.git .");
 
     printf("成功复制git历史提交记录\n");
@@ -53,6 +56,6 @@ int main() {
 
     printf("删除拉取目录二次结束\n");
 
-    
+
     return 0;
 }
