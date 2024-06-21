@@ -32,18 +32,18 @@ int main() {
 
     system("rm -rf /root/c/AutoCommit_push/AutoCommit");
 
-    printf("删除拉取目录结束");
+    printf("删除拉取目录结束\n");
 
 
     system("bash /root/c/AutoCommit_push/clone.sh");
 
-    printf("成功拉取新目录");
+    printf("成功拉取新目录\n");
 
 
 
     system("yes | cp -rf /root/c/AutoCommit_push/AutoCommit/.git .");
 
-    printf("成功复制git历史提交记录");
+    printf("成功复制git历史提交记录\n");
     
     system("git remote set-url origin git@github.com:lmliheng/AutoCommit.git");
 
