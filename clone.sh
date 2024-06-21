@@ -1,4 +1,5 @@
-#!/usr/bin/env bash
+#!/bin/sh
+
 
 # 仓库URL
 REPO_URL="https://github.com/lmliheng/AutoCommit.git"

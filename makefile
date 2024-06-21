@@ -1,11 +1,9 @@
-CC=gcc
-CFLAGS=-Wall
-TARGET=commit
-OBJ=src/commit.o
+CC = gcc
+CFLAGS = -Wall
+TARGET = commit
+OBJ = src/commit.o
 
-all: $(TARGET)
-
-$(TARGET): $(OBJ)
+commit: $(OBJ)
 	$(CC) $(CFLAGS) -o $@ $^
 
 %.o: %.c
