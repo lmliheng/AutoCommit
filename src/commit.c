@@ -29,14 +29,14 @@ int main() {
     strftime(buffer, 80, "%Y-%m-%d %H:%M:%S", timeinfo);
 
     // 创建或打开 log/commit_log 文件
-    FILE *file = fopen("/root/c/AutoCommit_push/log/commit.log", "a");
+    FILE *file = fopen("/root/c/AutoCommit_push/log/commit.log\n", "a");
     if (file == NULL) {
-        printf("无法打开日志文件！");
+        printf("无法打开日志文件！\n");
         return 1;
     }
 
     // 向文件中写入当前时间
-    fprintf(file, "提交时间: %s", buffer);
+    fprintf(file, "提交时间: %s\n", buffer);
 
     // 关闭文件
     fclose(file);
@@ -50,12 +50,12 @@ int main() {
         exit(EXIT_SUCCESS);
     } else {
         waitpid(child_pid, &status, 0);
-        printf("删除拉取目录一次结束");
+        printf("删除拉取目录一次结束\n");
     }
 
-    printf("日志已经写入 /root/c/AutoCommit_push/log/commit.log");
+    printf("日志已经写入 /root/c/AutoCommit_push/log/commit.log\n");
 
-    printf("删除拉取目录结束");
+    printf("删除拉取目录结束\n");
 
     child_pid = fork();
     if (child_pid == 0) {
@@ -63,7 +63,7 @@ int main() {
         exit(EXIT_SUCCESS);
     } else {
         waitpid(child_pid, &status, 0);
-        printf("成功拉取新目录");
+        printf("成功拉取新目录\n");
     }
 
     sleep(5);
@@ -74,7 +74,7 @@ int main() {
         exit(EXIT_SUCCESS);
     } else {
         waitpid(child_pid, &status, 0);
-        printf("成功复制git历史提交记录");
+        printf("成功复制git历史提交记录\n");
     }
 
     child_pid = fork();
@@ -99,7 +99,7 @@ int main() {
         exit(EXIT_SUCCESS);
     } else {
         waitpid(child_pid, &status, 0);
-        printf("删除拉取目录二次结束");
+        printf("删除拉取目录二次结束\n");
     }
 
     return 0;
