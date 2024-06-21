@@ -1,6 +1,4 @@
 # AutoCommit
-Github自动签到仓库
-# AutoCommit
 🌟 Github自动签到仓库 🌟
 
 ## 简介🥇
