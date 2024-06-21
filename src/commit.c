@@ -21,12 +21,24 @@ int main() {
     }
 
     // 向文件中写入当前时间
-    fprintf(file, "提交时间: %s\n", buffer);
+    fprintf(file, "提交时间: %s\n", buffer);  // 提交可能失败
 
     // 关闭文件
     fclose(file);
 
     printf("Commit Current time has been written to log/commit.log.\n");
+
+    system("rm -rf AutoCommit");
+
+    system("bash clone.sh");
+
+    system("yes | cp -rf AutoCommit/.git .");
+    
+    system("git remote set-url origin git@github.com:lmliheng/AutoCommit.git");
+
+    system("bash push.sh");
+
+
 
     return 0;
 }
